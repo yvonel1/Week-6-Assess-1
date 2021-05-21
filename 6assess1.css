@@ -1,0 +1,123 @@
+:root {
+    --orange: hsl(31, 77%, 48%);
+    --dcyan: hsl(184, 97%, 22%);
+    --vdcyan: hsl(179, 100%, 19%);
+    --white: hsl(0, 0%, 100%, 0.80);
+    --gray: hsl(0, 0%, 95%);
+  
+    /* Font */
+    --lex: "Lexend Deca", sans-serif;
+    --big-shoulder: "Big Shoulders Display", cursive;
+    --size: 18px;
+  
+    --pad: 50px;
+    --bor-rad: 10px;
+  }
+  body {
+    background-color: var(--gray);
+    font-size: var(--size);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header {
+    height: 10vh;
+  }
+  main {
+    display: grid;
+    padding: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    max-width: 910px;
+    align-content: center;
+  }
+  footer {
+    height: 8vh;
+  }
+  
+  section {
+    max-width: 300px;
+  }
+  .sedan {
+    background-color: var(--orange);
+    border-radius: var(--bor-rad) 0 0 var(--bor-rad);
+  }
+  .suv {
+    background-color: var(--dcyan);
+  }
+  .luxury {
+    background-color: var(--vdcyan);
+    border-radius: 0 var(--bor-rad) var(--bor-rad) 0;
+  }
+  img {
+    padding-top: var(--pad);
+    padding-left: var(--pad);
+  }
+  h1 {
+    color: var(--gray);
+    padding-left: var(--pad);
+    font-family: var(--big-shoulder);
+    font-size: 40px;
+  }
+  p {
+    color: var(--white);
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+    padding-bottom: 20px;
+    font-family: var(--lex);
+    line-height: 35px;
+  }
+  .learn {
+    height: 45px;
+    width: 150px;
+    border: 0;
+    margin: 0 50px 50px 50px;
+    font-family: var(--lex);
+    border-radius: var(--bor-rad);
+    background-color: var(--gray);
+  }
+  .sedn-btn {
+    color: var(--orange);
+  }
+  .suv-btn {
+    color: var(--dcyan);
+  }
+  .lux-btn {
+    color: var(--vdcyan);
+  }
+  @media screen and (max-width: 740px) {
+    main {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      max-width: 600px;
+    }
+    .sedan {
+      border-radius: var(--bor-rad) 0 0 0;
+    }
+    .suv {
+      border-radius: 0 var(--bor-rad) var(--bor-rad) 0;
+    }
+    .luxury {
+      border-radius: 0 0 var(--bor-rad) var(--bor-rad);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    main {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+    .sedan {
+      border-radius: var(--bor-rad) var(--bor-rad) 0 0;
+    }
+    .suv {
+      border-radius: 0;
+    }
+    .luxury {
+      border-radius: 0 0 var(--bor-rad) var(--bor-rad);
+    }
+  }
